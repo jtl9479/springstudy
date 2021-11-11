@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Exam exam = new NewlecExam();//부품  -->
+	<bean id="exam" class="spring.di.entity.NewlecExam" />
+	<!-- ExamConsole console = new GridExamConsole(); -->
+	<bean id="console" class="spring.di.ui.GridExamConsole">
+	<!-- console.setExam(exam); set은 삭제하고 소문자로 사용한다. -->
+	<!-- 참조형(reference) type. 참조란? 변수나 메서드를 모은 틀이 클래스 -->
+		<property name="exam" ref="exam" />
+	</bean>
+	
+
+</beans>
