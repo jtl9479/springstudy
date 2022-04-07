@@ -12,6 +12,7 @@ public class Program {
 		
 		
 		System.out.println("test");
+		System.out.println("test");
 		
 		
 	}
